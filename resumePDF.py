@@ -42,3 +42,21 @@ pdf.add_font('Serif', 'BI',
                     r"E:\\Desktop\\font\\serif I\\static\\SourceSerif4_18pt\\SourceSerif4_18pt-BoldItalic.ttf",
                     uni=True)
 
+# Resume Information
+resume_source = open('resume.json', 'r')
+PDFc = resume_source.read()
+resume_data = json.loads(PDFc)
+
+# Data
+for data in resume_data:
+    pdf.ln(5)
+    pdf.set_font('Serif', 'B', 15)
+    pdf.cell(0, 10, f"{data['header1']}", 'BU', ln=1)
+    pdf.ln(3)  
+
+
+
+
+
+
+pdf.output('Dan_Christian_resume.pdf')
