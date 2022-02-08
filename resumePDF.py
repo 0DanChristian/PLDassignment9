@@ -20,8 +20,10 @@ import json
 class PDF(FPDF):
     def header(resume):
         resume.image('respic.png', 170, 8,39)
-        resume.set_font('arial', 'B', 29)
+        resume.set_font('arial', 'BU', 29)
         resume.cell(0, 12, 'DAN CHRISTIAN PIÑERO', align = 'L', ln=1)
+        resume.set_font('arial', '', 15)
+        resume.cell(0,12, 'Customer Service Manager', align = 'L')
         resume.ln(25)                                                                   # note: 'In' is the spaces in between
 
 # PDF Format
