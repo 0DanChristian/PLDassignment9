@@ -1,0 +1,28 @@
+[
+    {
+        "header1" : "Personal Information",
+        "Name" : "Dan Christian Piñero",
+        "Address": "303-1069, Izumisawacho, Shiogama-shi, Miyagi",
+        "Contact No." : "+8137-422-2969",
+        "Email" : "danchristian0@gmail.com",   
+        "header2": "Objectives",
+        "OBJECTIVES" : "To maintain and improve customer satisfaction and experience through my proven problem-solving skill sets, and product knowledge.",
+        "header3": "Education",
+        "Course" : "Bachelor of Science in Computer Engineering (2016)",
+        "University" : "Tohoku University of Art and Design, National University in Sendai, Japan", 
+        "Relevant Coursework" : "Management Communications, Project Management, Organizational Behavior, Business Leadership.", 
+        "header4" : "Work Experience",
+        "Work1": "Customer Service Manager",
+        "Company1": "Transformative Digital Customer Experience (TDCX) Japan(Yokohoma)", 
+        "Years of Working"  : "More than 1 year working experience in non-voice based BPO supporting the customer with health care products.",
+        "header5": "Skills",
+        "Skill1" : "Strong communication skills (written and verbal).", 
+        "Skill2": "Good interpersonal skills, as well as the ability to understand and solve the customer's problems.", 
+        "Skill3": "Training new employees and getting them productive quickly.", 
+        "header6": "Reference",
+        "REFERENCE" : "Eiichiro Oda", 
+        "Occupation": "Japanese Manga Artist", 
+        "Contact": "+5127-476-1569",
+        "Footer" : "Dan Christian DR. Piñero"
+    }
+]
