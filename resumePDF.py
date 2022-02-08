@@ -82,7 +82,33 @@ for data in resume_data:
     pdf.cell(0, 5, f"{data['Course']}", align='R', ln=1)
     pdf.ln(3)
 
-    
+    # University
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, "University:", align='R', ln=1)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['University']}", align='R', ln=1)
+    pdf.ln(3)
+
+    # Relevant Coursework
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, "Relevant Coursework:", align='R', ln=1)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['Relevant Coursework']}", align='R', ln=1)
+    pdf.ln(3)
+
+    # header 4 (work exp)
+    pdf.set_font('Serif', 'B', 15)
+    pdf.cell(0, 10, f"{data['header4']}", 'BU', ln=1)
+    pdf.ln(5)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['Work1']}", align='R', ln=1)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['Company1']}", align='R', ln=1)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['Years of Working']}", align='R', ln=1)
+    pdf.ln(3)
+
+
 
 
 
