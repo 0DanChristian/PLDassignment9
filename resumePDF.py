@@ -16,8 +16,6 @@ from fpdf import FPDF
 from ctypes import alignment 
 import json
 
-
-
 # header
 class PDF(FPDF):
     def header(resume):
@@ -25,3 +23,22 @@ class PDF(FPDF):
         resume.set_font('arial', 'B', 29)
         resume.cell(0, 12, 'DAN CHRISTIAN PIÑERO', align = 'C', ln=1)
         resume.ln(25)                                                                   # note: 'In' is the spaces in between
+
+# PDF Format
+pdf = PDF('P', 'mm', "Letter")
+pdf.set_auto_page_break(auto=1, margin=30)
+pdf.add_page() 
+
+# custom fonts
+pdf.add_font('Serif', '',
+                    r"E:\\Desktop\\font\\serif I\\static\\SourceSerif4_18pt\\SourceSerif4_18pt-Black.ttf",
+                    uni=True)
+                    
+pdf.add_font('Serif', 'B',
+                    r"E:\\Desktop\\font\\serif I\\static\\SourceSerif4_18pt\\SourceSerif4_18pt-Bold.ttf",
+                    uni=True)
+
+pdf.add_font('Serif', 'BI',
+                    r"E:\\Desktop\\font\\serif I\\static\\SourceSerif4_18pt\\SourceSerif4_18pt-BoldItalic.ttf",
+                    uni=True)
+
