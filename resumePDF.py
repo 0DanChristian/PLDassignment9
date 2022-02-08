@@ -19,9 +19,9 @@ import json
 # header
 class PDF(FPDF):
     def header(resume):
-        resume.image('respic.png', 170, 8, 35)
+        resume.image('respic.png', 170, 8,39)
         resume.set_font('arial', 'B', 29)
-        resume.cell(0, 12, 'DAN CHRISTIAN PIÑERO', align = 'C', ln=1)
+        resume.cell(0, 12, 'DAN CHRISTIAN PIÑERO', align = 'L', ln=1)
         resume.ln(25)                                                                   # note: 'In' is the spaces in between
 
 # PDF Format
@@ -56,10 +56,10 @@ for data in resume_data:
 
     # personal info
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"Name: {data['Name']}", align='R', ln=1)
-    pdf.cell(0, 5, f"Address: {data['Address']}", align='R', ln=1)
-    pdf.cell(0, 5, f"Contact No.: {data['Contact No.']}", align='R', ln=1)
-    pdf.cell(0, 5, f"Email: {data['Email']}", align='R', ln=1)
+    pdf.cell(0, 5, f"Name: {data['Name']}", align='L', ln=1)
+    pdf.cell(0, 5, f"Address: {data['Address']}", align='L', ln=1)
+    pdf.cell(0, 5, f"Contact No.: {data['Contact No.']}", align='L', ln=1)
+    pdf.cell(0, 5, f"Email: {data['Email']}", align='L', ln=1)
     pdf.ln(0)
 
     # header 2
@@ -67,7 +67,7 @@ for data in resume_data:
     pdf.cell(0, 10, f"{data['header2']}", 'BU', ln=1)
     pdf.ln(3)
     pdf.set_font('Serif', '', 10)
-    pdf.multi_cell(0, 5, f"{data['OBJECTIVES']}", align='R', ln=1)
+    pdf.multi_cell(0, 5, f"{data['OBJECTIVES']}", align='L', ln=1)
     pdf.ln(1)
 
     # header 3
@@ -77,23 +77,23 @@ for data in resume_data:
 
     # Course
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, "Course:", align='R', ln=1)
+    pdf.cell(0, 5, "Course:", align='L', ln=1)
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"{data['Course']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{data['Course']}", align='L', ln=1)
     pdf.ln(3)
 
     # University
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, "University:", align='R', ln=1)
+    pdf.cell(0, 5, "University:", align='L', ln=1)
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"{data['University']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{data['University']}", align='L', ln=1)
     pdf.ln(3)
 
     # Relevant Coursework
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, "Relevant Coursework:", align='R', ln=1)
+    pdf.cell(0, 5, "Relevant Coursework:", align='L', ln=1)
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"{data['Relevant Coursework']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{data['Relevant Coursework']}", align='L', ln=1)
     pdf.ln(3)
 
     # header 4 (work exp)
@@ -101,13 +101,42 @@ for data in resume_data:
     pdf.cell(0, 10, f"{data['header4']}", 'BU', ln=1)
     pdf.ln(5)
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"{data['Work1']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{data['Work1']}", align='L', ln=1)
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"{data['Company1']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{data['Company1']}", align='L', ln=1)
     pdf.set_font('Serif', '', 10)
-    pdf.cell(0, 5, f"{data['Years of Working']}", align='R', ln=1)
+    pdf.cell(0, 5, f"{data['Years of Working']}", align='L', ln=1)
     pdf.ln(3)
 
+    # header 5 (skills)
+    pdf.set_font('Serif', 'B', 15)
+    pdf.cell(0, 10, f"{data['header5']}", 'BU', ln=1)
+    pdf.ln(3)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"- {data['Skill1']}", align='L', ln=1)
+    pdf.cell(0, 5, f"- {data['Skill2']}", align='L', ln=1)
+    pdf.ln(3)
+
+    # header 6 (refs)
+    pdf.set_font('Serif', 'B', 15)
+    pdf.cell(0, 10, f"{data['header6']}", 'BU', ln=1)
+    pdf.ln(3)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['REFERENCE']}", align='L', ln=1)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['Occupation']}", align='L', ln=1)
+    pdf.set_font('Serif', '', 10)
+    pdf.cell(0, 5, f"{data['Contact']}", align='L', ln=1)
+    pdf.ln(3)
+
+    # name
+#    pdf.set_font('arial', 'U', 8)
+#    pdf.set_x(20)
+#    pdf.cell(0, 0, f"{data['Footer']}", align='R')
+    pdf.image('name.png', 167, 265, 60)
+
+    # signature
+    pdf.image('signature.png', 167, 220, 50)
 
 
 
